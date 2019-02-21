@@ -1,6 +1,6 @@
-# Snapraid Runner Script
+# Snapraid BTRFS Runner Script
 
-This script runs snapraid, and sends it output to the console, a log file and
+This script is a fork of the [snapraid-runner](https://github.com/Chronial/snapraid-runner) project by Chronial and runs snapraid via [snapraid-btrfs](https://github.com/automorphism88/snapraid-btrfs) by automorphism88. It sends its output to the console, a log file and
 via email. All this is configurable.
 
 It can be run manually, but its main purpose is to be run via cronjob/windows
@@ -8,11 +8,10 @@ scheduler.
 
 ## How to use
 * If you don’t already have it, download and install
-  [the latest python 2.7](http://www.python.org/getit/).
-* Download [the latest release](https://github.com/Chronial/snapraid-runner/releases)
-  of this script and extract it anywhere or clone this repository via git.
-* Copy/rename the `snapraid-runner.conf.example` to `snapraid-runner.conf` and
-  edit its contents. You need to at least configure `snapraid.exectable` and
+  [the latest python 2.7](http://www.python.org/getit/). TODO: test script with Python 3.
+* Clone this repository via git.
+* Copy/rename the `snapraid-btrfs-runner.conf.example` to `snapraid-btrfs-runner.conf` and
+  edit its contents. You need to at least configure `snapraid-btrfs.executable`, `snapper.executable`, `snapraid.exectable`, and
   `snapraid.config`.
 * Run the script via `python snapraid-runner.py`.
 
@@ -23,7 +22,11 @@ scheduler.
 * Can send notification emails after each run or only for failures.
 * Can run `scrub` after `sync`
 
-## Changelog
+## Changelog for snapraid-btrfs-runner
+### (20 Feb 2019)
+* Initial release
+
+## Changelog for original snapraid-runner
 ### Unreleased
 * Add support for running `snapraid touch` (by ShoGinn, PR-11)
 * Add SMTP TLS support
