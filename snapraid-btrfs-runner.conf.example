@@ -1,3 +1,17 @@
+[snapraid-btrfs]
+; path to the snapraid-btrfs executable (e.g. /usr/bin/snapraid-btrfs)
+executable = snapraid-btrfs
+; specify snapper cleanup algorithm that snapraid-btrfs will use; defaults to none if left unset.
+cleanup-algorithm = 
+; specify whether snapraid-btrfs-runner should automatically clean up all but the last snapraid-btrfs snapshot after a successful sync
+cleanup = true
+; specify snapshot to use for scrub where snapraid-btrfs is not expected to create one automatically; defaults to 'sync' if left unset
+use-snapshot-all = sync
+
+[snapper]
+; path to snapper executable (e.g. /usr/bin/snapper)
+executable = snapper
+
 [snapraid]
 ; path to the snapraid executable (e.g. /bin/snapraid)
 executable = snapraid
@@ -5,7 +19,7 @@ executable = snapraid
 config = snapraid.conf
 ; abort operation if there are more deletes than this, set to -1 to disable
 deletethreshold = 40
-; if you want touch to be ran each time
+; if you want touch to be run each time
 touch = false
 
 [logging]
