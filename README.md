@@ -1,6 +1,6 @@
 # Snapraid BTRFS Runner Script
 
-This script is a fork of the [snapraid-runner](https://github.com/Chronial/snapraid-runner) project by Chronial and runs snapraid via [snapraid-btrfs](https://github.com/automorphism88/snapraid-btrfs) by automorphism88. It sends its output to the console, a log file and
+This script is a fork of the [snapraid-runner](https://github.com/Chronial/snapraid-runner) project by Chronial and runs snapraid via [snapraid-btrfs](https://github.com/automorphism88/snapraid-btrfs) by automorphism88 (use [this fork](https://github.com/Suika/snapraid-btrfs) by Suika if using snapper > 0.7). It sends its output to the console, a log file and
 via email. All this is configurable.
 
 It can be run manually, but its main purpose is to be run via cronjob/windows
